@@ -1,8 +1,10 @@
 # Gerenciamento de Pool de Conexões
 > [!NOTE]\
 > BASE DE CONHECIMENTO  
-[Software Engineering]() · [Construção]() · [Codificação]() ·
-[Banco de Dados]()
+[Software Engineering]() ·
+[Construção](https://github.com/yanjustino/base-de-conhecimento/tree/main/construcao) ·
+[Codificação](https://github.com/yanjustino/base-de-conhecimento/tree/main/construcao/codificacao) ·
+[Banco de Dados](https://github.com/yanjustino/base-de-conhecimento/tree/main/construcao/codificacao/banco-de-dados)
 
 
 Quando um processo do DTM ou o processo do Serviço de Integração de Dados executa um trabalho, ele solicita uma instância de conexão do pool. Se existir uma instância de conexão inativa, o pool de conexões a liberará para o processo do DTM ou o processo do Serviço de Integração de Dados. Se o pool de conexões não tiver uma instância de conexão inativa, o processo do DTM ou o processo do Serviço de Integração de Dados criará uma instância de conexão ativa.
