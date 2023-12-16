@@ -1,4 +1,10 @@
 # Gerenciamento de Pool de Conexões
+> [!NOTE]\
+> BASE DE CONHECIMENTO  
+[Software Engineering]() · [Construção]() · [Codificação]() ·
+[Banco de Dados]()
+
+
 Quando um processo do DTM ou o processo do Serviço de Integração de Dados executa um trabalho, ele solicita uma instância de conexão do pool. Se existir uma instância de conexão inativa, o pool de conexões a liberará para o processo do DTM ou o processo do Serviço de Integração de Dados. Se o pool de conexões não tiver uma instância de conexão inativa, o processo do DTM ou o processo do Serviço de Integração de Dados criará uma instância de conexão ativa.
 
 Quando o processo do DTM ou o processo do Serviço de Integração de Dados conclui o trabalho, ele libera a instância de conexão ativa para o pool como uma instância de conexão inativa. Se o pool de conexões contiver o número máximo de instâncias de conexão inativas, o Serviço de Integração de Dados descartará a instância de conexão ativa, em vez de liberá-la para o pool.
@@ -51,6 +57,15 @@ Quando um processo do DTM executa cinco trabalhos, ele usa o seguinte processo p
 1. Ele descarta uma conexão porque ela excede o tamanho do pool de conexões.
 1. Às 11:32, o tempo de inatividade máximo é atingido para as conexões inativas e o processo do DTM descarta duas conexões inativas.
 1. O processo do DTM mantém duas conexões inativas porque o tamanho mínimo do pool de conexões é dois.
+
+```mermaid
+sequenceDiagram
+    cliente->>DTM: às 11h e cria 5 instâncias de conexão
+    DTM-->>pool: às 11h30 libera 4 conexões (inativas)
+    DTM-->>descarte: descarta uma conexão porque ela excede o tamanho do pool
+    pool-->>descarte: Às 11:32 descarta duas conexões inativas
+    DTM-->>DTM: mantém duas conexões inativas porque o tamanho mínimo do pool
+```
 
 
 # Referência
