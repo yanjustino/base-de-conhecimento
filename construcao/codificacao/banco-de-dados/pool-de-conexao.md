@@ -1,7 +1,6 @@
 # Gerenciamento de Pool de Conexões
 > [!NOTE]\
-> BASE DE CONHECIMENTO  
-[Software Engineering]() ·
+> BASE DE CONHECIMENTO   
 [Construção](https://github.com/yanjustino/base-de-conhecimento/tree/main/construcao) ·
 [Codificação](https://github.com/yanjustino/base-de-conhecimento/tree/main/construcao/codificacao) ·
 [Banco de Dados](https://github.com/yanjustino/base-de-conhecimento/tree/main/construcao/codificacao/banco-de-dados)
